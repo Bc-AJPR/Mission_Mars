@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap/Bootswatch CSS -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css">
+
+    <title>Mission to Mars</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+    <!-- container -->
+    <div class="container">
+
+      <!-- jumbotron -->
+      <div class="jumbotron text-center p-3">
+        <h1>Mission to Mars</h1>
+        <a class="btn btn-primary btn-lg mt-3" href="/scrape" role="button">Scrape New Data</a>
+      </div><!-- /jumbotron -->
+      <div class="row">
+
+        <!-- Mars News -->
+        <div class="col-md-12">
+          <h2 class="mb-3">Latest Mars News</h2>
+          <p class="lead mb-1">{{ info_mars.headline }}</p>
+          <p>{{ info_mars.teaser }}</p>
+        </div><!-- /Mars News --> 
+      </div><!-- /1st row -->
+    </div>
+    <!--- Two Column Section -->
+  <div class="container padding">
+    <div class="row padding">
+      <div class="col-lg-8 col-md-8 col-sm-12">
+      <h2>Featured Mars Image</h2>
+      <img src="{{ info_mars.featured_image }}" class="img-fluid" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
+
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <h2>About the Red Planet</h2>
+        <a href="https://galaxyfacts-mars.com/">Galaxy Facts</a>
+        <br>
+        <div style="max-width: 750px; max-height: 550px; font-size: 15px; margin-bottom: 65px;"></div>
+        <div class="table-responsive">
+          <h2>Mars Fun Facts </h2>
+          {{ info_mars.mars_prof_table | safe}}
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- <div class="container">
+      <div class="row row-cols-*">
+          <div class="col">
+              <h2>Featured Mars Image</h2> <img class="img-fluid" src="{{ info_mars.featured_image }}">
+          </div> -->
+  </body>
