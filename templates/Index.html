@@ -36,38 +36,72 @@
     <div class="row padding">
       <div class="col-lg-8 col-md-8 col-sm-12">
       <h2>Featured Mars Image</h2>
-      <img src="{{ info_mars.featured_image }}" class="img-fluid" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
-
+      <a href= https://spaceimages-mars.com>
+        <img src="{{ info_mars.featured_image }}"  class="img-fluid" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
+      </a>
+      <div style="max-width: 750px; max-height: 550px; font-size: 15px; margin-bottom: 65px;"></div>
+      <h2>Mars Hemisphere Images</h2>
+      <div class="card-group">
+        <div class="col-md-3">
+          <div class="card">
+            <a href="{{ info_mars.mars_images_urls[0]['img_url'] }}">
+              <img src="{{ info_mars.mars_images_urls[0]['img_url'] }}" class="card-img-top img-fluid" alt="{{ info_mars.mars_images_urls[0]['title'] }}">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">{{ info_mars.mars_images_urls[0]['title'] }}</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <a href="{{ info_mars.mars_images_urls[1]['img_url'] }}">
+              <img src="{{ info_mars.mars_images_urls[1]['img_url'] }}" class="card-img-top img-fluid" alt="{{ info_mars.mars_images_urls[1]['title'] }}">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">{{ info_mars.mars_images_urls[1]['title'] }}</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <a href="{{ info_mars.mars_images_urls[2]['img_url'] }}">
+              <img src="{{ info_mars.mars_images_urls[2]['img_url'] }}" class="card-img-top img-fluid" alt="{{ info_mars.mars_images_urls[2]['title'] }}">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">{{ info_mars.mars_images_urls[2]['title'] }}</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <a href="{{ info_mars.mars_images_urls[3]['img_url'] }}">
+              <img src="{{ info_mars.mars_images_urls[3]['img_url'] }}" class="card-img-top img-fluid" alt="{{ info_mars.mars_images_urls[3]['title'] }}">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">{{ info_mars.mars_images_urls[3]['title'] }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
         <h2>About the Red Planet</h2>
         <a href="https://galaxyfacts-mars.com/">Galaxy Facts</a>
-        <br>
-        <div style="max-width: 750px; max-height: 550px; font-size: 15px; margin-bottom: 65px;"></div>
         <div class="table-responsive">
-          <h2>Mars Fun Facts </h2>
           {{ info_mars.mars_prof_table | safe}}
+        <br>
+        <h2>Mars Vs. Earth</h2>
+        <div class="table-responsive">
+          {{ info_mars.mars_earth_com_table | safe}}
         </div>
         </div>
       </div>
     </div>
   </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <!-- <div class="container">
-      <div class="row row-cols-*">
-          <div class="col">
-              <h2>Featured Mars Image</h2> <img class="img-fluid" src="{{ info_mars.featured_image }}">
-          </div> -->
-  </body>
+<!--Footer-->
+<footer class = "footer">
+  <div class ="container">
+      <span>Copyright &copy; Andres Pulido 2022</span>
+  </div>
+</footer>
+</body>

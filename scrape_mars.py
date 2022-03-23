@@ -64,13 +64,15 @@ def scrape():
     # In[9]:
     mars_earth_com_df = galaxy_facts_table[0]
     mars_earth_com_df.columns = ['Description','Mars','Earth']
-    mars_earth_com_df.set_index('Description',inplace=True)
-    mars_earth_com_table = mars_earth_com_df.to_html(classes="table table-striped")
+    mars_earth_com_table = mars_earth_com_df.to_html(classes="table table-striped", index = False)
+    mars_earth_com_table
+    
     # In[10]:
     mars_prof_df = galaxy_facts_table[1]
     mars_prof_df.columns = ['Description','Values']
-    mars_prof_df.set_index('Description',inplace=True)
-    mars_prof_table = mars_prof_df.to_html(classes="table table-striped")
+    mars_prof_table = mars_prof_df.to_html(classes="table table-striped", index= False)
+    mars_prof_table
+    
 
 
     # ### Mars Hemisphere Images ###
